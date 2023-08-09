@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ /*左右两侧分割*/
+ .flex-container {
+  display: flex;
+}
+
+.left-column {
+  flex: 0 0 61.8%; /* 分配左侧栏61.8%的宽度 */
+  
+  background-color: lightgray; /* 为了可视化，添加背景颜色 */
+}
+
+.right-column {
+  flex: 0 0 39.2%; /* 分配右侧栏39.2%的宽度 */
+  background-color: green; /* 为了可视化，添加背景颜色 */
+}
+
+
+/*table表格设计*/
+ table {
+   border-collapse: collapse;
+   width: 100%;
+ }
+ th, td {
+   border: 1px solid gray;
+   padding: 5px;
+   text-align: left;
+ }
+
+ /*顶端导航栏设计*/
+ .nav-list {
+   list-style: none;
+   display: flex; /* 使用弹性盒子布局实现横向排列 */
+   align-items: center; /* 在纵轴上居中对齐 */
+ }
+/*右侧联系方式设计*/
+ .category-item {
+
+   margin-right: 10px; /* 添加一些间距 */
+ }
+
+ .contact-box {
+  border: 1px solid gray;
+  padding: 61.8px
+
+}
+
+.contact-box h2 {
+  margin-top: 0;
+}
+
+.contact-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-box li {
+  margin-bottom: 10px;
+}

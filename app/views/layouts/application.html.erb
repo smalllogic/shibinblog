@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% if @article.present? %>
+    <title><%= @article.meta_title %></title>
+    <meta name="keywords" content="<%= @article.mata_keyword %>">
+      <meta name="description" content="<%= @article.meta_description %>">
+    <% else %>
+<title>石斌销售网站</title>
+      <meta name="keywords" content="网站、视频号、互联网推广">
+      <meta name="description" content="一些制作网站、制作视频号的流程">
+    <% end %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+
+
+    <div class="flex-container">
+  <div class="left-column"> <!-- 左侧栏 -->
+
+    <nav class="navbar">
+    <ul class="nav-list">
+      <li class="category-item"><%= link_to "Home", root_path %></li>
+      <% Category.all.each do |category| %>
+        <li class="category-item"><%= link_to category.name, articles_path(category_id: category.id) %></li>
+      <% end %>
+    </ul>
+  </nav>
+    <%= yield %>
+
+  </div>
+  <div class="right-column"> <!-- 右侧栏 -->
+    <!-- 右侧内容 -->
+    <div class="contact-box">
+         <h2>可交朋友</h2>
+         <ul>
+           <li>Phone: 155</li>
+           <li>WeChat: shibingoodman</li>
+           <li>读书、健身、生产、创作</li>
+         </ul>
+       </div>
+
+
+
+
+  </div>
+</div>
+
+
+  </body>
+</html>
