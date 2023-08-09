@@ -20,8 +20,8 @@
 
 .left-column {
   flex: 0 0 61.8%; /* 分配左侧栏61.8%的宽度 */
-  
-  background-color: lightgray; /* 为了可视化，添加背景颜色 */
+
+  background-color: lightyellow; /* 为了可视化，添加背景颜色 */
 }
 
 .right-column {
