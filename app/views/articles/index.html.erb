@@ -21,6 +21,7 @@
   </tbody>
 </table>
 </div>
-
+<% if current_user && current_user.is_admin %>
 <%= link_to "New article", new_article_path %>
 <%= link_to "New category", new_category_path %>
+<% end %>

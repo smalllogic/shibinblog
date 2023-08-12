@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :articles do
   collection do
     get 'category/:category', action: :index, as: :category
