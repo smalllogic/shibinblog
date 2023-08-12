@@ -5,8 +5,8 @@
     <title><%= @article.meta_title %></title>
     <meta name="keywords" content="<%= @article.mata_keyword %>">
       <meta name="description" content="<%= @article.meta_description %>">
-    <% else %>
-<title>石斌销售网站</title>
+      <% else %>
+       <title>石斌销售网站</title>
       <meta name="keywords" content="网站、视频号、互联网推广">
       <meta name="description" content="一些制作网站、制作视频号的流程">
     <% end %>
@@ -15,6 +15,8 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -35,7 +37,9 @@
     <%= yield %>
 
   </div>
-  <div class="right-column"> <!-- 右侧栏 -->
+  <div class="right-column">
+    <%= render 'common/navbar' %>
+ <!-- 右侧栏 -->
     <!-- 右侧内容 -->
     <div class="contact-box">
          <h2>可交朋友</h2>

@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
   before_action :authenticate_user! , only: [:new]
-
+before_action :require_is_admin,only: [:new,:create,:edit,:update,:destroy ]
   # GET /articles or /articles.json
   def index
   if params[:category_id].present?
