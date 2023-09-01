@@ -20,7 +20,18 @@ set :branch, "main"
 # role :app, %w{deploy@example.com}, my_property: :my_value
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 
+namespace :deploy do
+  desc 'Run database migrations'
+  task :migrate do
+    on roles(:app) do
+      within release_path do
+        execute :rake, 'db:migrate'
+      end
+    end
+  end
+end
 
+after 'deploy:symlink:release', 'deploy:migrate'
 
 
 # Configuration
