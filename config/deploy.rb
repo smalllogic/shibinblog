@@ -9,7 +9,7 @@ set :repo_url, "https://github.com/smalllogic/shibinblog.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
-set :deploy_to, "/home/shibin/shibinblog"
+set :deploy_to, "/home/lighthouse/shibinblog"
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
